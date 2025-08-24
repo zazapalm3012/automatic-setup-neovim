@@ -7,5 +7,9 @@ read based
 if [ "$based" == 1 ]; then
   echo $based
 else
-  
+  if ! which nvim > /dev/null 2>&1; then
+    echo "Not have Nvim in this machine"
+    sudo pacman -S neovim
+  else
+    nvim -v
 fi
