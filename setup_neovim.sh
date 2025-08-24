@@ -12,4 +12,5 @@ else
     sudo pacman -S neovim
   else
     nvim -v
+  fi
 fi
