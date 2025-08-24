@@ -14,14 +14,15 @@ else
     nvim -v
   fi
 fi
-echo "Do you want a config?"
+echo "Do you want a config? [y/N]"
 read ans_config
 if [ "$ans_config" == "y" ]; then
  if [ -d "$HOME/.config/nvim" ]; then
    echo "Done"
  else
    mkdir -p "$HOME/.config/nvim"
-   sudo cp "$HOME/setup_neovim/init.lua" "$HOME/.config/nvim/"  
+   cp "$HOME/automatic-setup-neovim/init.lua" "$HOME/.config/nvim/"  
+   sudo pacman -S nodejs npm
    echo "Installed your neovim is ready to use."
   fi
 fi
