@@ -24,5 +24,6 @@ if [ "$ans_config" == "y"]; then
    mkdir $HOME/.config/nvim
    sudo cp $HOME/setup_neovim/init.lua $HOME/.config/nvim/  
    echo "Installed your neovim is ready to use."
+  fi
 fi
 
